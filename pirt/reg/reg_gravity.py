@@ -143,7 +143,7 @@ class GravityRegistration(GDGRegistration):
             
         # For o in [1,2]
         tmp = scipy.ndimage.convolve1d(im, k, d, mode=edgeMode)
-        return Aarray(tmp, im.sampling)
+        return Aarray(tmp)  # , im.sampling)
     
     
     def _create_mass(self, image_id, im, scale):
