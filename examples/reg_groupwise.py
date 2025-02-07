@@ -160,7 +160,7 @@ def centerOfMass(im):
     mx, my = pirt.meshgrid(im)
     w = 1.0/im.sum()
     return (im*mx).sum()*w, (im*my).sum()*w
-com = pirt.Pointset(2)
+com = pirt.PointSet(2)
 for i in range(len(ims2)):
     com.append(centerOfMass(ims2[i]))
 com.append(com[0])
