@@ -133,8 +133,8 @@ class DeformationField(Deformation):
         if not self._sampling_equal(field2, fd):
             if not fd.defined_sampling: #sum([(s==1) for s in fd.sampling]) == self.ndim:
                 pass # Sampling probably not given
-            else:
-                raise ValueError('Given reference field sampling does not match.')
+            # else:
+            #     raise ValueError('Given reference field sampling does not match.')
         
         # Return
         return self.__class__(fields)
